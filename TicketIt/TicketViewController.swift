@@ -26,6 +26,7 @@ class TicketViewController: NSViewController {
     dialog.canChooseDirectories    = true
     dialog.canCreateDirectories    = true
     dialog.allowsMultipleSelection = false
+    dialog.allowedFileTypes = ["csv"]
     return dialog
   }()
 
