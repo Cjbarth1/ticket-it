@@ -12,7 +12,7 @@ struct TicketItManager {
   
   typealias TicketManagerCompletion = (Bool) -> Void
   
-  static func generateFromFile(fromPath path: String, project: Project, completion: @escaping TicketManagerCompletion) {
+  static func generateFromFile(fromPath path: String, project: Project, type: TicketType, completion: @escaping TicketManagerCompletion) {
     let manager = FileManager.default
     if manager.fileExists(atPath: path) {
       do {
@@ -20,6 +20,11 @@ struct TicketItManager {
         let cleanedCSVContent = cleanRows(file: csvContent)
         let parser = CSVParser()
         let results = parser.mapToTickets(fromContents: cleanedCSVContent, project: project)
+        
+        results.forEach({ ticket in
+          ticket.type = type
+        })
+        
         self.createJiraTickets(tickets: results) { result in
           completion(result)
         }

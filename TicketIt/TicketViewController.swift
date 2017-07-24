@@ -14,6 +14,7 @@ class TicketViewController: NSViewController {
   @IBOutlet weak var projectsComboBox: NSComboBox!
   @IBOutlet weak var filePathField: NSTextField!
   @IBOutlet weak var statusLabel: NSTextField!
+  @IBOutlet weak var typeComboBox: NSComboBox!
   
   // Computed
   fileprivate var dialog: NSOpenPanel = {
@@ -56,6 +57,15 @@ class TicketViewController: NSViewController {
     projectsComboBox.usesDataSource = true
     projectsComboBox.delegate = self
     projectsComboBox.dataSource = self
+    projectsComboBox.isEditable = false
+    
+    typeComboBox.usesDataSource = false
+    typeComboBox.delegate = self
+    typeComboBox.isEditable = false
+    
+    typeComboBox.addItems(withObjectValues:
+      [TicketType.story.rawValue, TicketType.task.rawValue, TicketType.bug.rawValue]
+    )
   }
 
 
@@ -76,7 +86,9 @@ class TicketViewController: NSViewController {
   @IBAction func TicketItPressed(_ sender: Any) {
     guard let project = selectedProject, filePath != "" else { return }
     statusLabel.stringValue = "Generating tickets..."
-    TicketItManager.generateFromFile(fromPath: filePath, project: project) { success in
+    guard let ticketType = TicketType(rawValue: typeComboBox.objectValue as! String) else { return }
+    
+    TicketItManager.generateFromFile(fromPath: filePath, project: project, type: ticketType) { success in
       self.statusLabel.stringValue = success ? "Tickets Created Successfully!" : "Failed to create tickets"
     }
   }
@@ -99,7 +111,9 @@ extension TicketViewController: NSComboBoxDataSource {
 // MARK: - Projects CB Delegate
 extension TicketViewController: NSComboBoxDelegate {
   func comboBoxSelectionDidChange(_ notification: Notification) {
-    selectedProject = projects[projectsComboBox.indexOfSelectedItem]
+    if (notification.object as! NSComboBox) == projectsComboBox {
+      selectedProject = projects[projectsComboBox.indexOfSelectedItem]
+    }
   }
 }
 

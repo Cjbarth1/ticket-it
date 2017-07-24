@@ -20,7 +20,7 @@ struct CSVParser {
     
       if columns.count > 1 {
         let mapper = TicketMapper()
-        let ticket = mapper.mapFromArray(columns, project: project)
+        let ticket = mapper.mapFromArray(columns, project: project, selectedType: .story)
         result.append(ticket)
       }
       

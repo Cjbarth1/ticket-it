@@ -19,10 +19,10 @@ final class TicketMapper {
     case component
     case epic
   }
-  
+
   typealias Model = JiraTicket
   
-  func mapFromArray(_ ticketData: [String], project: Project) -> Model {
+  func mapFromArray(_ ticketData: [String], project: Project, selectedType: TicketType) -> Model {
     
     print(ticketData)
     
@@ -31,6 +31,7 @@ final class TicketMapper {
     let label = ticketData[Columns.label.rawValue]
     let component = ticketData[Columns.component.rawValue]
     let epic = ticketData[Columns.epic.rawValue]
+    let type = selectedType
     
     let ticket = JiraTicket(
       summary: summary,
@@ -38,6 +39,7 @@ final class TicketMapper {
       label: label,
       component: component,
       epic: epic,
+      type: type,
       project: project
     )
     
@@ -51,7 +53,7 @@ final class TicketMapper {
     let project = ["id": ticket.project.id]
     innerBody["project"] = project
     
-    let type = ["name": "Story"]
+    let type = ["name": ticket.type.rawValue]
     innerBody["issuetype"] = type
     
     innerBody["summary"] = ticket.summary

@@ -700,22 +700,22 @@
             </objects>
             <point key="canvasLocation" x="69" y="619"/>
         </scene>
-        <!--Authentication View Controller-->
+        <!--Login-->
         <scene sceneID="Hyv-ko-l5A">
             <objects>
-                <viewController storyboardIdentifier="AuthenticationViewController" id="iEg-Xe-bDH" customClass="AuthenticationViewController" customModule="TicketIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" storyboardIdentifier="AuthenticationViewController" id="iEg-Xe-bDH" customClass="AuthenticationViewController" customModule="TicketIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="nSx-2h-sNZ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbE-bF-UL2">
-                                <rect key="frame" x="18" y="239" width="414" height="41"/>
+                                <rect key="frame" x="18" y="219" width="414" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="K56-pm-sls"/>
                                     <constraint firstAttribute="height" constant="41" id="rC0-WS-bjC"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ticket-It" id="Ogd-oQ-iMT">
-                                    <font key="font" metaFont="system" size="34"/>
+                                    <font key="font" metaFont="system" size="30"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -771,11 +771,11 @@
                             <constraint firstItem="Lce-3p-QXi" firstAttribute="centerX" secondItem="nSx-2h-sNZ" secondAttribute="centerX" id="eCh-Pl-87g"/>
                             <constraint firstAttribute="trailing" secondItem="o2n-xE-2A4" secondAttribute="trailing" constant="50" id="fp2-a9-qlA"/>
                             <constraint firstItem="bBw-EL-DSr" firstAttribute="leading" secondItem="nSx-2h-sNZ" secondAttribute="leading" constant="50" id="hCk-U8-u8a"/>
-                            <constraint firstItem="xbE-bF-UL2" firstAttribute="top" secondItem="nSx-2h-sNZ" secondAttribute="top" constant="20" id="kkZ-t3-AWX"/>
+                            <constraint firstItem="xbE-bF-UL2" firstAttribute="top" secondItem="nSx-2h-sNZ" secondAttribute="top" constant="40" id="kkZ-t3-AWX"/>
                             <constraint firstItem="xbE-bF-UL2" firstAttribute="leading" secondItem="nSx-2h-sNZ" secondAttribute="leading" constant="20" id="kqa-EU-Owm"/>
                             <constraint firstItem="o2n-xE-2A4" firstAttribute="leading" secondItem="nSx-2h-sNZ" secondAttribute="leading" constant="50" id="tPO-sD-ynL"/>
                             <constraint firstItem="WgZ-zD-E0Y" firstAttribute="top" secondItem="o2n-xE-2A4" secondAttribute="bottom" constant="10" id="vg3-nR-RSs"/>
-                            <constraint firstItem="bBw-EL-DSr" firstAttribute="top" secondItem="xbE-bF-UL2" secondAttribute="bottom" constant="75" id="xKH-d8-oOn"/>
+                            <constraint firstItem="bBw-EL-DSr" firstAttribute="top" secondItem="xbE-bF-UL2" secondAttribute="bottom" constant="55" id="xKH-d8-oOn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -788,16 +788,16 @@
             </objects>
             <point key="canvasLocation" x="598" y="240"/>
         </scene>
-        <!--Ticket View Controller-->
+        <!--Teeps-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="TicketViewController" id="XfG-lQ-9wD" customClass="TicketViewController" customModule="TicketIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Teeps" storyboardIdentifier="TicketViewController" id="XfG-lQ-9wD" customClass="TicketViewController" customModule="TicketIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oqB-9l-a5u">
-                                <rect key="frame" x="285" y="100" width="111" height="32"/>
+                                <rect key="frame" x="285" y="135" width="111" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="mqJ-Pb-fhT"/>
                                 </constraints>
@@ -823,7 +823,7 @@
                                 </connections>
                             </button>
                             <comboBox verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ano-VP-aZd">
-                                <rect key="frame" x="65" y="139" width="328" height="27"/>
+                                <rect key="frame" x="65" y="174" width="328" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="u1Q-f9-zSG"/>
                                 </constraints>
@@ -839,22 +839,22 @@
                                 </comboBoxCell>
                             </comboBox>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy5-5U-wBZ">
-                                <rect key="frame" x="18" y="239" width="414" height="41"/>
+                                <rect key="frame" x="18" y="219" width="414" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="WEx-AL-1NY"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ticket-It" id="WXq-f9-16y">
-                                    <font key="font" metaFont="system" size="34"/>
+                                    <font key="font" metaFont="system" size="30"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62l-Kx-oPD">
-                                <rect key="frame" x="65" y="107" width="218" height="21"/>
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62l-Kx-oPD">
+                                <rect key="frame" x="65" y="142" width="218" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="UPf-pP-4jI"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="b0X-1O-DzD">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="b0X-1O-DzD">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -874,7 +874,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygf-5M-muZ">
-                                <rect key="frame" x="223" y="172" width="4" height="17"/>
+                                <rect key="frame" x="223" y="207" width="4" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="b1X-uN-sns"/>
                                 </constraints>
@@ -884,24 +884,51 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <comboBox verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-L5-Gqs">
+                                <rect key="frame" x="229" y="103" width="107" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="E30-gE-mlb"/>
+                                </constraints>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="VSG-zq-Kru">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                            </comboBox>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE0-0y-J8O">
+                                <rect key="frame" x="147" y="108" width="76" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="3m3-2t-dgx"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ticket type:" id="Orw-bX-sQd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="oiT-L5-Gqs" firstAttribute="leading" secondItem="QE0-0y-J8O" secondAttribute="trailing" constant="8" id="0VC-zD-Oz4"/>
+                            <constraint firstItem="QE0-0y-J8O" firstAttribute="top" secondItem="62l-Kx-oPD" secondAttribute="bottom" constant="17" id="1lx-0w-KgC"/>
                             <constraint firstItem="P2B-Dm-gDy" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="7lb-LQ-cVH"/>
                             <constraint firstItem="fFt-uN-BQB" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="9um-rt-6PI"/>
                             <constraint firstItem="xy5-5U-wBZ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="CAO-v5-VX4"/>
                             <constraint firstItem="oqB-9l-a5u" firstAttribute="top" secondItem="ano-VP-aZd" secondAttribute="bottom" constant="15" id="CgK-Bn-cjH"/>
                             <constraint firstItem="ano-VP-aZd" firstAttribute="top" secondItem="Ygf-5M-muZ" secondAttribute="bottom" constant="8" id="Cmf-Uu-sQj"/>
                             <constraint firstAttribute="trailing" secondItem="oqB-9l-a5u" secondAttribute="trailing" constant="60" id="GtZ-38-U6g"/>
-                            <constraint firstItem="xy5-5U-wBZ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Ita-le-d9k"/>
+                            <constraint firstItem="oiT-L5-Gqs" firstAttribute="top" secondItem="62l-Kx-oPD" secondAttribute="bottom" constant="15" id="Iab-ta-fe2"/>
+                            <constraint firstItem="xy5-5U-wBZ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="Ita-le-d9k"/>
                             <constraint firstAttribute="trailing" secondItem="ano-VP-aZd" secondAttribute="trailing" constant="60" id="ROp-7J-1Vc"/>
                             <constraint firstAttribute="trailing" secondItem="xy5-5U-wBZ" secondAttribute="trailing" constant="20" id="TY7-O0-djD"/>
-                            <constraint firstItem="P2B-Dm-gDy" firstAttribute="top" secondItem="62l-Kx-oPD" secondAttribute="bottom" constant="12" id="V6S-Et-JJ5"/>
                             <constraint firstItem="oqB-9l-a5u" firstAttribute="leading" secondItem="62l-Kx-oPD" secondAttribute="trailing" constant="8" id="ZhF-cY-hr1"/>
+                            <constraint firstAttribute="trailing" secondItem="oiT-L5-Gqs" secondAttribute="trailing" constant="117" id="bt8-w3-xqR"/>
+                            <constraint firstItem="QE0-0y-J8O" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="149" id="eBb-Ia-fNK"/>
                             <constraint firstItem="62l-Kx-oPD" firstAttribute="top" secondItem="ano-VP-aZd" secondAttribute="bottom" constant="15" id="gbk-PJ-Bra"/>
                             <constraint firstItem="ano-VP-aZd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="65" id="jco-pF-55Y"/>
+                            <constraint firstItem="P2B-Dm-gDy" firstAttribute="top" secondItem="oiT-L5-Gqs" secondAttribute="bottom" constant="12" id="ktB-qp-62T"/>
                             <constraint firstItem="62l-Kx-oPD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="65" id="lWd-oO-OuQ"/>
                             <constraint firstItem="Ygf-5M-muZ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="mPt-yz-TX5"/>
-                            <constraint firstItem="ano-VP-aZd" firstAttribute="top" secondItem="xy5-5U-wBZ" secondAttribute="bottom" priority="999" constant="75" id="qGb-zR-IEJ"/>
+                            <constraint firstItem="ano-VP-aZd" firstAttribute="top" secondItem="xy5-5U-wBZ" secondAttribute="bottom" priority="999" constant="20" id="qGb-zR-IEJ"/>
                             <constraint firstItem="fFt-uN-BQB" firstAttribute="top" secondItem="P2B-Dm-gDy" secondAttribute="bottom" constant="12" id="qL5-LB-fOc"/>
                         </constraints>
                     </view>
@@ -909,6 +936,7 @@
                         <outlet property="filePathField" destination="62l-Kx-oPD" id="vTA-42-Hcj"/>
                         <outlet property="projectsComboBox" destination="ano-VP-aZd" id="e2q-Tu-1te"/>
                         <outlet property="statusLabel" destination="Ygf-5M-muZ" id="s7J-JK-dJ3"/>
+                        <outlet property="typeComboBox" destination="oiT-L5-Gqs" id="Wo7-yW-T8R"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
